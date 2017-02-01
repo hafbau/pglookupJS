@@ -3,9 +3,14 @@
 module.exports = {
 
   development: {
-    client: 'sqlite3',
+    client: 'pg',
     connection: {
-      filename: './dev.sqlite3'
+      database: 'vagrant',
+      user:     'development',
+      password: 'development',
+      host: 'localhost',
+      port: 5432,
+      ssl: true
     }
   },
 
