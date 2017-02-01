@@ -5,7 +5,7 @@ module.exports = {
   development: {
     client: 'pg',
     connection: {
-      database: 'vagrant',
+      database: 'lookuppeeps',
       user:     'development',
       password: 'development',
       host: 'localhost',

@@ -4,6 +4,9 @@ exports.up = function(knex, Promise) {
     table.increments();
     table.string('description');
     table.date('date_achieved');
+    table.integer('famous_people_id');
+    table.foreign('famous_people_id')
+    .references('famous_people.id').onUpdate('CASCADE');
   });
 };
 
