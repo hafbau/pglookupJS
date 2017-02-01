@@ -14,7 +14,7 @@ db.connect((error, conn) => {
   console.log('Connection made...Searching..');
   conn.query(query, (err, data) => {
     const list = data.rows;
-    console.log(`Found ${list.length} person(s) by the name 'input':`);
+    console.log(`Found ${list.length} person(s) by the name '${input}':`);
     list.forEach((row, num) => {
       console.log(`- ${num + 1}: ${row.first_name} ${row.last_name}, born '${row.birthdate.toDateString()}'`);
     });
